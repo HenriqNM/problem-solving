@@ -12,3 +12,4 @@ class Solution:
             res[i] *= postfix #the number in the res array multiplied by the postfix
             postfix *= nums[i] #postfix multiplied by the number in the original array
         return res
+    
