@@ -1,4 +1,6 @@
+from typing import List
 from collections import Counter
-a = [1,2,3,4,4,4,5,6,5,5,5,5]
-cnt = Counter(a)
-print(max(cnt.values()))
+
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        return [n for n, x in Counter(nums).most_common(k)]
