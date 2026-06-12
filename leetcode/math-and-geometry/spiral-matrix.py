@@ -1,0 +1,14 @@
+class Solution:
+    def spiralOrder(self, matrix: list[list[int]]) -> list[int]:
+        res = []
+        while matrix:
+            res.extend(matrix.pop(0))
+            if matrix and matrix[0]:
+                for row in matrix:
+                    res.append(row.pop())
+            if matrix:
+                res.extend(matrix.pop()[::-1])
+            if matrix and matrix[0]:
+                for row in reversed(matrix):
+                    res.append(row.pop(0))
+        return res

@@ -1,0 +1,5 @@
+# Environments
+.idea/
+
+# IDEs and Editors
+.venv/
