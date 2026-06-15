@@ -2,4 +2,10 @@ from typing import List
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        return True if len(nums) != len(set(nums)) else False
+        numset = set()
+        for n in nums:
+            if n in numset:
+                return True
+            else:
+                numset.add(n)
+        return False
